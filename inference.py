@@ -31,6 +31,7 @@ from torch.utils.data import DataLoader
 from data import Data
 from train import update_params
 from text import sequence_to_text
+from pydub import AudioSegment
 
 sys.path.insert(0, "tacotron2")
 sys.path.insert(0, "tacotron2/waveglow")
@@ -105,6 +106,9 @@ def infer(flowtron_path, waveglow_path, output_dir, text, speaker_id, n_frames,
 
     write(os.path.join(output_dir, 'sid{}_sigma{}.wav'.format(speaker_id, sigma)),
           data_config['sampling_rate'], audio)
+
+    f = AudioSegment.from_wav(output_dir + 'sid{}_sigma{}.wav'.format(speaker_id, sigma))
+    f.export(output_dir + 'sid{}_sigma{}_16bit.wav'.format(speaker_id, sigma), format="wav", parameters=["-sample_fmt", "s16"])
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ Python: 3.8.13
 Install system packages:
 
     sudo apt update
-    sudo apt install python3-pip
+    sudo apt install python3-pip ffmpeg
 
 Install PyTorch:
 
