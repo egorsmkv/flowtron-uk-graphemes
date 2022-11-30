@@ -1,5 +1,4 @@
 import json
-from ukro_g2p.predict import G2P
 
 ROWS_FILE = '/home/yehor/ML/flowtron/dataset_lada_trimmed/accept/metadata.jsonl'
 

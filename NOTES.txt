@@ -22,10 +22,6 @@ Using dataset:
     wget https://huggingface.co/datasets/Yehor/ukrainian-tts-lada/resolve/main/dataset_lada_trimmed_22khz.zip
     unzip dataset_lada_trimmed_22khz.zip
 
-Install Ukrainian G2P:
-
-    pip install -U git+https://github.com/egorsmkv/ukro_g2p
-
 Install dependencies:
 
     pip install -r requirements.txt
